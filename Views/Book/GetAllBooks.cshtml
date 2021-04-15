@@ -1,0 +1,16 @@
+﻿<div class ="container">
+    <div class="row">
+        @foreach (var book in Model)
+        {
+            <div class="card" style="width: 16rem;height:25rem;border:groove;margin:10px">
+                <img class="card-img-top" style="height:60%" src="@book.CoverPhotoUrl" alt="Image">
+                <div class="card-body">
+                    <h5 class="card-title">@book.Title</h5>
+                    <p class="card-text">@book.Author</p>
+                    <a asp-controller="Book" asp-action="GetBookById" asp-route-id="@book.Id" asp-route-name="@book.Title" class="btn btn-outline-primary">Details</a>  
+                </div>
+            </div>
+        }
+    </div>
+   
+</div>
